@@ -1,0 +1,9 @@
+[[language]]
+name = "rust"
+language-server = { command = "rustup", args = ["run", "stable", "rust-analyzer"] }
+[language.config.check]
+command = "clippy"
+
+[[language]]
+name = "cpp"
+language-server = { command = "clangd", args=["--compile-commands-dir=compile_commands_directory"] }
