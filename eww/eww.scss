@@ -1,0 +1,160 @@
+* {
+  all: unset;
+}
+window {
+  background-color: #ffffff;
+  border: 10px solid #ff0000;
+	color: #000000;
+  font-family: Museo Sans;
+}
+
+.title {
+  font-family: Verdana;
+  font-size: 32px;
+  color: #000000;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.titleSmall {
+  font-family: Verdana;
+  font-size: 24;
+  color: #000000;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.arrow {
+  font-family: Verdana;
+  font-size: 32;
+  color: #ff0000;
+}
+
+
+.header {
+  margin-top: -10px;
+}
+
+.label {
+  font-size: 24px;
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.gauge {
+  background-color: #c3c3c3;
+  color: #ff0000;
+}
+
+.percentText {
+  color: #000000;
+  font-weight: bold;
+  font-size: 56px;
+}
+
+.percentTextSmall {
+  color: #000000;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.icon {
+  font-family: Verdana;
+  font-size: 50px;
+  color: #000000;
+  font-weight: bold;
+  //margin-left: 15px;
+}
+
+.iconSmall {
+  font-family: Verdana;
+  font-size: 40px;
+  color: #000000;
+  font-weight: bold;
+  //margin-left: 15px;
+}
+
+.cpu {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 10px;
+  padding: 10px;
+  border: 5px solid #c3c3c3;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+.gpu {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 25px;
+  padding: 10px;
+  border: 5px solid #c3c3c3;
+  border-radius: 10px;
+}
+
+.ram {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 10px;
+  border: 5px solid #c3c3c3;
+  border-radius: 10px;
+}
+
+.cpu scale trough {
+  all: unset;
+  background-color: #c3c3c3;
+  min-width: 150px;
+  min-height: 25px;
+  border-radius: 20px;
+}
+
+.cpu scale trough highlight {
+  all: unset;
+  background-color: #ff0000;
+  color: #000000;
+  border-radius: 20px;
+}
+
+.gpu scale trough {
+  all: unset;
+  background-color: #c3c3c3;
+  min-width: 150px;
+  min-height: 25px;
+  border-radius: 20px;
+}
+
+.gpu scale trough highlight {
+  all: unset;
+  background-color: #ff0000;
+  color: #000000;
+  border-radius: 20px;
+}
+
+.ram scale trough {
+  all: unset;
+  background-color: #c3c3c3;
+  min-width: 100px;
+  min-height: 20px;
+  border-radius: 15px;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.ram scale trough highlight {
+  all: unset;
+  background-color: #ff0000;
+  color: #000000;
+  border-radius: 15px;
+}
+
+.ssd scale trough {
+  margin-left: 20px;
+}
+
+
