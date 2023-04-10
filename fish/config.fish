@@ -1,4 +1,5 @@
 starship init fish | source
+fish_vi_key_bindings
 set fish_greeting
 export PATH="$HOME/.cargo/bin:$PATH"
 export SUDO_EDITOR="hx"
