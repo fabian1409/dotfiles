@@ -1,6 +1,7 @@
 starship init fish | source
 set fish_greeting
 export PATH="$HOME/.cargo/bin:$PATH"
+export SUDO_EDITOR="hx"
 alias .. "cd .."
 alias cat "bat"
 alias ls "exa"
