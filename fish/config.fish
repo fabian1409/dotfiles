@@ -18,3 +18,5 @@ alias find "fd"
 alias xclip "wl-copy"
 alias sd "cd (seldir)"
 alias vim "nvim"
+
+fzf_configure_bindings --directory=\cf
