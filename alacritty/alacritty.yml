@@ -1,0 +1,86 @@
+window:
+  dimensions:
+   columns: 90
+   lines: 28
+
+  # Window padding (changes require restart)
+  padding:
+   x: 20
+   y: 20
+
+  # Spread additional padding evenly around the terminal content.
+  #dynamic_padding: false
+
+  decorations: none
+
+  # Background opacity
+  opacity: 0.95
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Scrolling distance multiplier.
+  multiplier: 3
+
+# Font configuration
+font:
+  normal:
+    family: "Hack Nerd Font"
+    style: Regular
+  bold:
+    family: "Hack Nerd Font"
+    style: Bold
+  italic:
+    family: "Hack Nerd Font"
+    style: Italic
+  bold_italic:
+    family: "Hack Nerd Font"
+    style: Bold Italic
+
+  size: 12
+
+# Base16 Google Dark - alacritty color config
+# Seth Wright (http://sethawright.com)
+colors:
+  # Default colors
+  primary:
+    background: '0x1d1f21'
+    foreground: '0xc5c8c6'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x1d1f21'
+    cursor: '0xc5c8c6'
+
+  # Normal colors
+  normal:
+    black:   '0x1d1f21'
+    red:     '0xcc342b'
+    green:   '0x198844'
+    yellow:  '0xfba922'
+    blue:    '0x3971ed'
+    magenta: '0xa36ac7'
+    cyan:    '0x3971ed'
+    white:   '0xc5c8c6'
+
+  # Bright colors
+  bright:
+    black:   '0x969896'
+    red:     '0xf96a38'
+    green:   '0x282a2e'
+    yellow:  '0x373b41'
+    blue:    '0xb4b7b4'
+    magenta: '0xe0e0e0'
+    cyan:    '0x3971ed'
+    white:   '0xffffff'
+
+draw_bold_text_with_bright_colors: true
+
+selection:
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+shell:
+ program: /bin/fish
