@@ -7,3 +7,8 @@ command = "clippy"
 [[language]]
 name = "cpp"
 language-server = { command = "clangd", args=["--compile-commands-dir=compile_commands_directory"] }
+
+[[language]]
+name = "bash"
+file-types = ["config", "sh", "conf"]
+language-server = { command = "bash-language-server", args=["--stdio"] }
