@@ -33,6 +33,9 @@ disabled = true
 [cmake]
 disabled = true
 
+[c]
+disabled = true
+
 [java]
 disabled = true
 
