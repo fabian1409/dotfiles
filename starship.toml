@@ -13,13 +13,13 @@ disabled = true
 disabled = true
 
 [character]
-vicmd_symbol = '[-](bold red)'
+vicmd_symbol = '[vim](bold red)'
 success_symbol = '[❯](bold red)'
-error_symbol = '[x](bold red)'
+error_symbol = '[](bold red)'
 
 [directory]
 style = 'bold white'
-read_only = 'r'
+read_only = ' '
 
 [git_branch]
 style = 'bold blue'
