@@ -26,3 +26,8 @@ C-7 = ["toggle_comments"]
 w = ":write"
 q = ":quit"
 
+[keys.insert]
+C-h = "move_char_left"
+C-j = "move_line_down"
+C-k = "move_line_up"
+C-l = "move_char_right"
