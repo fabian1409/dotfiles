@@ -8,8 +8,6 @@ set fish_greeting
 # env vars
 export PATH="$HOME/.cargo/bin:$PATH"
 export SUDO_EDITOR="hx"
-export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
-export PATH="$HOME/Android/Sdk/emulator:$PATH"
 
 # alias
 alias .. "cd .."
