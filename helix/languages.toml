@@ -1,14 +1,27 @@
 [[language]]
 name = "rust"
-language-server = { command = "rustup", args = ["run", "stable", "rust-analyzer"] }
-[language.config.check]
+language-servers = [ "rust-analyzer" ]
+
+[language-server.rust-analyzer]
+command = "rustup"
+args = ["run", "stable", "rust-analyzer"]
+
+[language-server.rust-analyzer.config.check]
 command = "clippy"
 
 [[language]]
 name = "cpp"
-language-server = { command = "clangd", args=["--compile-commands-dir=compile_commands_directory"] }
+language-servers = [ "clangd" ]
+
+[language-server.clangd]
+command = "clangd"
+args = ["--compile-commands-dir=compile_commands_directory"]
 
 [[language]]
 name = "bash"
 file-types = ["config", "sh", "conf"]
-language-server = { command = "bash-language-server", args=["--stdio"] }
+language-servers = [ "bash" ]
+
+[language-server.bash]
+command = "bash-language-server"
+args = ["--stdio"]
