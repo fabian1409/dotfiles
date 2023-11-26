@@ -25,3 +25,17 @@ language-servers = [ "bash" ]
 [language-server.bash]
 command = "bash-language-server"
 args = ["--stdio"]
+
+[[language]]
+name = "latex"
+file-types = ["tex"]
+language-servers = [ "texlab" ]
+
+[language-server.texlab]
+command = "texlab"
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+
+[language-server.texlab.config.texlab.chktex]
+onEdit = true
