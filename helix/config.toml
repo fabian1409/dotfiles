@@ -26,6 +26,8 @@ H = ["move_char_left", "move_char_left", "move_char_left", "move_char_left", "mo
 J = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"]
 K = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"]
 L = ["move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right"]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.normal.space]
 w = ":write"
