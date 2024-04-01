@@ -1,6 +1,14 @@
+# https://github.com/vlabo/cspell-lsp
+[language-server.cspell]
+command = "cspell-lsp"
+args = ["--stdio"]
+
+[language-server.typos]
+command = "typos-lsp"
+
 [[language]]
 name = "rust"
-language-servers = [ "rust-analyzer" ]
+language-servers = [ "rust-analyzer", "typos" ]
 
 [language-server.rust-analyzer]
 command = "rustup"
@@ -18,9 +26,16 @@ command = "clangd"
 args = ["--compile-commands-dir=compile_commands_directory"]
 
 [[language]]
+name = "python"
+language-servers = [ "pylsp", "typos" ]
+
+[language-server.pylsp]
+command = "pylsp"
+
+[[language]]
 name = "bash"
 file-types = ["config", "sh", "conf"]
-language-servers = [ "bash" ]
+language-servers = [ "bash", "typos" ]
 
 [language-server.bash]
 command = "bash-language-server"
@@ -29,13 +44,14 @@ args = ["--stdio"]
 [[language]]
 name = "latex"
 file-types = ["tex"]
-language-servers = [ "texlab" ]
+language-servers = [ "texlab", "cspell" ]
 
 [language-server.texlab]
 command = "texlab"
 
 [language-server.texlab.config.texlab.build]
 onSave = true
+args = ["-output-format=pdf", "--shell-escape"]
 
 [language-server.texlab.config.texlab.chktex]
 onEdit = true
