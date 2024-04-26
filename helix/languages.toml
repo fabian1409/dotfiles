@@ -5,6 +5,7 @@ args = ["--stdio"]
 
 [language-server.typos]
 command = "typos-lsp"
+config.config = "/home/fabian/.config/helix/typos.toml"
 
 [[language]]
 name = "rust"
