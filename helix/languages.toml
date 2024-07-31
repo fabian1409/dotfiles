@@ -7,6 +7,9 @@ args = ["--stdio"]
 command = "typos-lsp"
 config.config = "/home/fabian/.config/helix/typos.toml"
 
+[language-server.buffer-language-server]
+command = "buffer-language-server"
+
 [[language]]
 name = "rust"
 language-servers = [ "rust-analyzer", "typos" ]
@@ -28,7 +31,7 @@ args = ["--compile-commands-dir=compile_commands_directory"]
 
 [[language]]
 name = "python"
-language-servers = [ "pylsp", "typos" ]
+language-servers = [ "pylsp", "typos", "buffer-language-server" ]
 
 [language-server.pylsp]
 command = "pylsp"
@@ -36,7 +39,7 @@ command = "pylsp"
 [[language]]
 name = "bash"
 file-types = ["config", "sh", "conf"]
-language-servers = [ "bash", "typos" ]
+language-servers = [ "bash", "typos", "buffer-language-server" ]
 
 [language-server.bash]
 command = "bash-language-server"
@@ -56,3 +59,15 @@ args = ["-output-format=pdf", "--shell-escape"]
 
 [language-server.texlab.config.texlab.chktex]
 onEdit = true
+
+[[language]]
+name = "markdown"
+language-servers = [ "buffer-language-server"]
+
+[[language]]
+name = "typst"
+language-servers = [ "typst-lsp", "buffer-language-server"]
+
+[[language]]
+name = "toml"
+language-servers = [ "buffer-language-server"]

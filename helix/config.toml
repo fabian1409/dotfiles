@@ -3,11 +3,12 @@ theme = "onedark"
 [editor]
 line-number = "relative"
 mouse = true
-bufferline = "multiple"
+bufferline = "never"
 completion-trigger-len = 1
 color-modes = true
 auto-info = false
 popup-border = "popup"
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
@@ -31,13 +32,12 @@ max-wrap = 25 # increase value to reduce forced mid-word wrapping
 [editor.smart-tab]
 enable = false
 
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 C-7 = ["toggle_comments"]
-H = ["move_char_left", "move_char_left", "move_char_left", "move_char_left", "move_char_left"]
-J = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"]
-K = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"]
-L = ["move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right"]
 # C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 X = ["extend_line_up", "extend_to_line_bounds"]
