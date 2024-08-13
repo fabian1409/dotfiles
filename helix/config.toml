@@ -7,8 +7,10 @@ bufferline = "never"
 completion-trigger-len = 1
 color-modes = true
 auto-info = false
-popup-border = "popup"
+popup-border = "all"
+rounded-corners = true
 end-of-line-diagnostics = "hint"
+completion-timeout = 5
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
@@ -45,6 +47,8 @@ C-h = ["jump_view_left"]
 C-j = ["jump_view_down"]
 C-k = ["jump_view_up"]
 C-l = ["jump_view_right"]
+D = "@xd"
+Y = "@xy"
 
 [keys.normal.space]
 w = ":write"
