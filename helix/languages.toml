@@ -3,6 +3,16 @@
 command = "cspell-lsp"
 args = ["--stdio"]
 
+[language-server.harper]
+command = "harper-ls"
+args = ["--stdio"]
+
+# [language-server.harper.config.harper-ls]
+# diagnosticSeverity = "information"
+
+[language-server.harper.config.harper-ls.linters]
+sentence_capitalization = false
+
 [language-server.typos]
 command = "typos-lsp"
 config.config = "/home/fabian/.config/helix/typos.toml"
@@ -12,7 +22,7 @@ command = "buffer-language-server"
 
 [[language]]
 name = "rust"
-language-servers = [ "rust-analyzer", "typos" ]
+language-servers = [ "rust-analyzer", "harper" ]
 
 [language-server.rust-analyzer]
 command = "rustup"
@@ -49,6 +59,11 @@ args = ["--stdio"]
 name = "latex"
 file-types = ["tex"]
 language-servers = [ "texlab", "cspell" ]
+
+[[language]]
+name = "typst"
+file-types = ["typ"]
+language-servers = [ "typst-lsp", "harper" ]
 
 [language-server.texlab]
 command = "texlab"
