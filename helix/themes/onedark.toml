@@ -3,10 +3,13 @@ inherits = "onedark"
 "ui.background" = { }
 
 "ui.statusline" = { fg = "white" }
+"ui.statusline.inactive" = { fg = "light-gray" }
 
 "ui.help" = { fg = "white" }
 "ui.popup" = { }
 "ui.menu" = { fg = "white" }
+"ui.menu.selected" = { bg = "gray", modifiers = ["bold"] }
+"ui.text.focus" = { fg = "white", bg = "gray", modifiers = ["bold"] }
 
 "ui.file-tree.dir-text" = { fg = "blue" }
 "ui.file-tree.dir-icon" = { fg = "red" }
