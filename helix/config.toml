@@ -34,7 +34,7 @@ enable = true
 max-wrap = 25 # increase value to reduce forced mid-word wrapping
 
 [editor.smart-tab]
-enable = false
+enable = true
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
