@@ -10,12 +10,17 @@ inherits = "onedark"
 "ui.menu" = { fg = "white" }
 "ui.menu.selected" = { bg = "gray", modifiers = ["bold"] }
 "ui.text.focus" = { fg = "white", bg = "gray", modifiers = ["bold"] }
+"ui.text.directory" = { fg = "blue" }
 
 "ui.file-tree.dir-text" = { fg = "blue" }
 "ui.file-tree.dir-icon" = { fg = "red" }
 "ui.file-tree.file-text" = { fg = "white" }
 "ui.file-tree.file-icon" = { fg = "white" }
 "ui.file-tree.indent-guide" = { fg = "gray" }
+
+"ui.statusline.normal" = { fg = "blue", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "purple", modifiers = ["bold"] }
 
 [palette]
 black = "#242424"
