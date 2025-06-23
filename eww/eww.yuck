@@ -5,64 +5,58 @@
     :thickness 10
     :start-at 25
     (box :class textClass text)
-   )
+  )
 )
 
 (defwidget cpu[]
-  (box :orientation 'v' :style "margin-left: -15px;"
-   (progressBar
-      :value {EWW_CPU.avg} 
-      :text {round(EWW_CPU.avg, 0)}
-      :class 'gauge'
-      :textClass 'percentText'
-    )
+  (progressBar
+    :value {EWW_CPU.avg} 
+    :text {round(EWW_CPU.avg, 0)}
+    :class 'gauge'
+    :textClass 'percentText'
   )
 )
 
 (defwidget gpu[]
-  (box :orientation 'v' :style "margin-left: -15px;"
-   (progressBar
-      :value {gpu_util} 
-      :text {gpu_util}
-      :class 'gauge'
-      :textClass 'percentText'
-    )
+  (progressBar
+    :value {gpu_util} 
+    :text {gpu_util}
+    :class 'gauge'
+    :textClass 'percentText'
   )
 )
 
 (defwidget ram[]
-  (box :orientation 'v' :style "margin-bottom: -90px; padding-bottom: 10px"
-   (progressBar
-      :value {EWW_RAM.used_mem_perc} 
-      :text {round(EWW_RAM.used_mem_perc, 0)}
-      :class 'gauge'
-      :textClass 'percentTextSmall'
-    )
+  (progressBar
+    :value {EWW_RAM.used_mem_perc} 
+    :text {round(EWW_RAM.used_mem_perc, 0)}
+    :class 'gauge'
+    :textClass 'percentTextSmall'
   )
 )
 
 (defwidget sensor_panel [] 
   (box :orientation "v" :space-evenly "false"
     (box :orientation "h" :space-evenly "true" 
-      (box :orientation "v" :class "cpu" :space-evenly "false" 
+      (box :orientation "v" :class "cpu" :space-evenly "false" :style "margin-right: 10px"
         (box :orientation "h" :class "header" :space-evenly "false"
-          (box :class "icon" "")
-          (box :class "title" "i7-6700K")
+          ; (box :class "icon" "󰻠")
+          (box :class "title" "R7 7700X")
         )
         (box :orientation "h"
           (cpu)
           (box :orientation "v" :space-evenly "false"
             (scale :min 0 :active "false" :max 101 :value {cpu_temp})
             (box :class "label" :space-evenly "false" "Temp " {cpu_temp} "°C")
-            (scale :min 0 :active "false" :max 4500 :value {EWW_CPU.cores[0].freq})
+            (scale :min 0 :active "false" :max 5500 :value {EWW_CPU.cores[0].freq})
             (box :class "label" :space-evenly "false" "Clock " {round(EWW_CPU.cores[0].freq / 1000, 1)} "GHz")
           )
         )
       )
       (box :orientation "v" :class "gpu" :space-evenly "false" 
         (box :orientation "h" :class "header" :space-evenly "false"
-          (box :class "icon" "")
-          (box :class "title" "GTX 1070 8GB")
+          ; (box :class "icon" "󰢮")
+          (box :class "title" "RTX 4060 Ti")
         )    
         (box :orientation "h"
           (gpu)
@@ -75,41 +69,39 @@
         )     
       )
     )
-    (box :orientation "h" :spacing -30;:space-evenly "false" 
-      (box :orientation "v" :class "ram" :space-evenly "false" 
-        (box :orientation "h" :class "header" :style "margin-top: -10px;" :space-evenly "false"
-          (box :class "iconSmall" "")
-          (box :class "titleSmall" "RAM 16GB")
-        )
-        (ram)  
-      )
-      (box :orientation "v" :class "ram" :space-evenly "false" 
+    (box :orientation "h" :space-evenly "true" 
+      (box :orientation "v" :class "ram" :space-evenly "false" :style "margin-right: 10px"
         (box :orientation "h" :class "header" :space-evenly "false"
-          (box :class "iconSmall" "")
+          ; (box :class "iconSmall" "󰘚")
+          (box :class "titleSmall" "RAM 32GB")
+        )
+        (box :style "min-height: 110px"
+          (ram)  
+        )
+      )
+      (box :orientation "v" :class "ram" :space-evenly "false" :style "margin-right: 10px"
+        (box :orientation "h" :class "header" :space-evenly "false"
+          ; (box :class "iconSmall" "󰌗")
           (box :class "titleSmall" "Network")
         )
-        (box :orientation "h" :space-evenly "false" :style "padding-left: 35px"
+        (box :orientation "h" :space-evenly "false"
           (box :class "arrow" "")
-          (box :class "titleSmall" {round(EWW_NET["enp3s0"].NET_UP / 1000, 0)}"kB/s")
+          (box :class "titleSmall" {round(EWW_NET["eno1"].NET_UP / 1000, 0)}"kB/s")
         )
-        (box :orientation "h" :space-evenly "false" :style "padding-left: 35px"
+        (box :orientation "h" :space-evenly "false"
           (box :class "arrow" "")
-          (box :class "titleSmall" {round(EWW_NET["enp3s0"].NET_DOWN / 1000, 0)}"kB/s")
+          (box :class "titleSmall" {round(EWW_NET["eno1"].NET_DOWN / 1000, 0)}"kB/s")
         )
       )
       (box :orientation "v" :class "ram" :space-evenly "false" 
         (box :orientation "h" :class "header" :space-evenly "false"
-          (box :class "iconSmall" "")
+          ; (box :class "iconSmall" "󰋊")
           (box :class "titleSmall" "Storage")
         ) 
         (box :orientation "v" :space-evenly "false"
           (box :orientation "h" :class "ssd" :space-evenly "false"
             (box :class "label" "SSD")
-            (scale :min 0 :active "false" :max 101 :value 50)
-          )
-          (box :orientation "h" :space-evenly "false"
-            (box :class "label" "HDD")
-            (scale :min 0 :active "false" :max 101 :value 20)
+            (scale :min 0 :active "false" :max 101 :value {EWW_DISK["/"].used_perc})
           )
         )
       )
@@ -117,13 +109,12 @@
   )
 )
 
-;;(defpoll ram-used :interval "1s"  "~/.config/eww/scripts/getram")
 (defpoll cpu_temp :interval "1s" "scripts/get_cpu_temp")
 (defpoll gpu_temp :interval "1s" "scripts/get_gpu_temp")
 (defpoll gpu_util :interval "1s" "scripts/get_gpu_util")
 (defpoll gpu_freq :interval "1s" "scripts/get_gpu_freq")
 
-(defwindow sensor_panel :monitor 2 :geometry (geometry :x "0" :y "0" :width "800px" :height "480px")
+(defwindow sensor_panel :monitor 0 :geometry (geometry :x "0" :y "0" :width "800px" :height "480px")
   (sensor_panel)
 )
    
