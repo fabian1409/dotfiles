@@ -365,7 +365,7 @@ freetype-load-flags = hinting,force-autohint,monochrome,autohint
 theme = 
 
 # Background color for the window.
-background = #1c1c1c
+background = #0a0a0a
 
 # Foreground color for the window.
 foreground = #ffffff
@@ -782,7 +782,7 @@ mouse-scroll-multiplier = 1
 # On macOS, background opacity is disabled when the terminal enters native
 # fullscreen. This is because the background becomes gray and it can cause
 # widgets to show through which isn't generally desirable.
-background-opacity = 0.98
+background-opacity = 1
 
 # A positive value enables blurring of the background when background-opacity
 # is less than 1. The value is the blur radius to apply. A value of 20

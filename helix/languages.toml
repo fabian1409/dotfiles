@@ -1,88 +1,21 @@
-# https://github.com/vlabo/cspell-lsp
-[language-server.cspell]
-command = "cspell-lsp"
-args = ["--stdio"]
+[language-server.copilot]
+command = "copilot-ls"
+args = ["serve"]
 
-[language-server.harper]
-command = "harper-ls"
-args = ["--stdio"]
-
-# [language-server.harper.config.harper-ls]
-# diagnosticSeverity = "information"
-
-[language-server.harper.config.harper-ls.linters]
-sentence_capitalization = false
-
-[language-server.typos]
-command = "typos-lsp"
-config.config = "/home/fabian/.config/helix/typos.toml"
-
-[language-server.buffer-language-server]
-command = "buffer-language-server"
-
-[[language]]
-name = "rust"
-language-servers = [ "rust-analyzer", "harper" ]
-
-[language-server.rust-analyzer]
-command = "rustup"
-args = ["run", "stable", "rust-analyzer"]
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-[[language]]
-name = "cpp"
-language-servers = [ "clangd" ]
-
-[language-server.clangd]
-command = "clangd"
-args = ["--compile-commands-dir=compile_commands_directory"]
+[language-server.rust-analyzer.config.files]
+watcher = "server"
 
 [[language]]
-name = "python"
-language-servers = [ "pylsp", "typos", "buffer-language-server" ]
-
-[language-server.pylsp]
-command = "pylsp"
-
-[[language]]
-name = "bash"
-file-types = ["config", "sh", "conf"]
-language-servers = [ "bash", "typos", "buffer-language-server" ]
-
-[language-server.bash]
-command = "bash-language-server"
-args = ["--stdio"]
-
-[[language]]
-name = "latex"
-file-types = ["tex"]
-language-servers = [ "texlab", "cspell" ]
-
-[[language]]
-name = "typst"
-file-types = ["typ"]
-language-servers = [ "typst-lsp", "harper" ]
-
-[language-server.texlab]
-command = "texlab"
-
-[language-server.texlab.config.texlab.build]
-onSave = true
-args = ["-output-format=pdf", "--shell-escape"]
-
-[language-server.texlab.config.texlab.chktex]
-onEdit = true
+name = "rust"
+language-servers = [ "rust-analyzer", "codebook", "copilot" ]
 
 [[language]]
 name = "markdown"
-language-servers = [ "buffer-language-server"]
-
-[[language]]
-name = "typst"
-language-servers = [ "typst-lsp", "buffer-language-server"]
-
-[[language]]
-name = "toml"
-language-servers = [ "buffer-language-server"]
+language-servers = [ "codebook" ]
