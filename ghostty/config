@@ -343,7 +343,7 @@ adjust-box-thickness =
 # See the notes about adjustments in `adjust-cell-width`.
 # 
 # Available in: 1.2.0
-adjust-icon-height = 
+adjust-icon-height = +25%
 
 # The method to use for calculating the cell width of a grapheme cluster.
 # The default value is `unicode` which uses the Unicode standard to determine
@@ -624,7 +624,7 @@ minimum-contrast = 1
 palette = 0=#1e1e1e
 palette = 1=#cc6666
 palette = 2=#98c379
-palette = 3=#98c379
+palette = 3=#e5c07b
 palette = 4=#61afef
 palette = 5=#b294bb
 palette = 6=#2bbac5
@@ -1753,13 +1753,13 @@ window-vsync = true
 # If true, new windows and tabs will inherit the working directory of the
 # previously focused window. If no window was previously focused, the default
 # working directory will be used (the `working-directory` option).
-window-inherit-working-directory = true
+window-inherit-working-directory = false
 
 # If true, new windows and tabs will inherit the font size of the previously
 # focused window. If no window was previously focused, the default font size
 # will be used. If this is false, the default font size specified in the
 # configuration `font-size` will be used.
-window-inherit-font-size = true
+window-inherit-font-size = false
 
 # Configure a preference for window decorations. This setting specifies
 # a _preference_; the actual OS, desktop environment, window manager, etc.
