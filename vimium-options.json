@@ -1,0 +1,91 @@
+{
+  "hideHud": true,
+  "settingsVersion": "2.3",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: #FFFFFF;\nborder: none;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\ncolor: red;\n}",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "*",
+      "pattern": "https?://cybertype.app/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://cybertype.app/*"
+    },
+    {
+      "passKeys": "f",
+      "pattern": "https?://proxer.me/*"
+    },
+    {
+      "passKeys": "l",
+      "pattern": "https?://proxer.me/*"
+    },
+    {
+      "passKeys": "j",
+      "pattern": "https?://proxer.me/*"
+    },
+    {
+      "passKeys": "f",
+      "pattern": "https?://www.youtube.com/watch*"
+    },
+    {
+      "passKeys": "l",
+      "pattern": "https?://www.youtube.com/watch*"
+    },
+    {
+      "passKeys": "j",
+      "pattern": "https?://www.youtube.com/watch*"
+    },
+    {
+      "passKeys": "t",
+      "pattern": "https?://www.youtube.com/watch*"
+    },
+    {
+      "passKeys": "f",
+      "pattern": "https?://www.crunchyroll.com/watch/*"
+    },
+    {
+      "passKeys": "l",
+      "pattern": "https?://www.crunchyroll.com/watch/*"
+    },
+    {
+      "passKeys": "j",
+      "pattern": "https?://www.crunchyroll.com/watch/*"
+    },
+    {
+      "passKeys": "f",
+      "pattern": "https?://www.crunchyroll.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.overleaf.com/*"
+    },
+    {
+      "passKeys": "f",
+      "pattern": "https?://www.twitch.tv/*"
+    },
+    {
+      "passKeys": "t",
+      "pattern": "https?://www.twitch.tv/*"
+    },
+    {
+      "passKeys": "m",
+      "pattern": "https?://www.twitch.tv/*"
+    },
+    {
+      "passKeys": "/",
+      "pattern": "https?://github.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://app.gather.town/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://monkeytype.com/*"
+    }
+  ]
+}
