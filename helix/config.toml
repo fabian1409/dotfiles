@@ -13,13 +13,16 @@ end-of-line-diagnostics = "hint"
 completion-timeout = 5
 true-color = true
 insert-final-newline = false
-
-[editor.aliases]
-copilot = ["pipe copilot-ls prompt --file %{buffer_name} --prompt"]
-blame = ["sh git blame -L %{cursor_line},+1 %{buffer_name}"]
+inline-completion-timeout = 150
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+left = [
+  "mode",
+  "spinner",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator"
+]
 right = ["diagnostics", "file-encoding", "register", "position-percentage"]
 
 [editor.cursor-shape]
@@ -32,7 +35,7 @@ hidden = true
 
 [editor.soft-wrap]
 enable = true
-max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-wrap = 25  # increase value to reduce forced mid-word wrapping
 
 [editor.smart-tab]
 enable = true
@@ -46,14 +49,22 @@ display-messages = true
 [editor.word-completion]
 trigger-length = 3
 
+[commands]
+":copilot" = [
+  "pipe copilot-prompt prompt --file %{buffer_name} --prompt '%arg{0}'"
+]
+":blame" = ["sh git blame -L %{cursor_line},+1 %{buffer_name}"]
+":hex2dec" = ["pipe python -c 'print(int(\"%{selection}\", 16))'"]
+":dec2hex" = ["pipe python -c 'print(hex(int(\"%{selection}\")))'"]
+
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 C-7 = "toggle_comments"
 X = ["extend_line_up", "extend_to_line_bounds"]
-C-h = "jump_view_left_tmux"
-C-j = "jump_view_down_tmux"
-C-k = "jump_view_up_tmux"
-C-l = "jump_view_right_tmux"
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
 W = "move_next_sub_word_start"
 B = "move_prev_sub_word_start"
 E = "move_next_sub_word_end"
@@ -88,3 +99,6 @@ O = "@<space>D%severity<space>error"
 C-w = "move_next_word_start"
 C-b = "move_prev_word_start"
 C-e = "move_next_word_end"
+C-j = "delete_word_backward"
+C-a = "inline_completion_accept"
+C-d = "inline_completion_dismiss"

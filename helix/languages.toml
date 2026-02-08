@@ -1,6 +1,12 @@
+global-language-servers = ["codebook"]
+
 [language-server.copilot]
-command = "copilot-ls"
-args = ["serve"]
+command = "copilot-language-server"
+args = ["--stdio"]
+
+[language-server.copilot.config]
+editorInfo = { name = "Helix", version = "25.01" }
+editorPluginInfo = { name = "helix-copilot", version = "0.1.0" }
 
 [language-server.codebook]
 command = "codebook-lsp"
@@ -12,10 +18,22 @@ command = "clippy"
 [language-server.rust-analyzer.config.files]
 watcher = "server"
 
-[[language]]
-name = "rust"
-language-servers = [ "rust-analyzer", "codebook", "copilot" ]
+[language-server.tailwind-language-server]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
 
 [[language]]
-name = "markdown"
-language-servers = [ "codebook" ]
+name = "rust"
+language-servers = ["rust-analyzer", "copilot"]
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server", "tailwind-language-server"]
+
+[[language]]
+name = "just"
+auto-format = true
+
+[[language]]
+name = "toml"
+auto-format = true
